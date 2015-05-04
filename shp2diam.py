@@ -25,10 +25,12 @@ def usage():
         diameter|diam|d
         radius|rad|r
         latitude|lat
-        longitude|lon        
+        longitude|lon  
+        
+    Elliot Sefton-Nash (e.sefton-nash@uclmail.net)
 
     """
-    exit
+    exit()
  
  
 def getHeader():
@@ -108,9 +110,9 @@ if __name__ == '__main__':
 
     except:
         print 'pyshp is not installed. You must install the pyshp module.'
-        exit
+        exit()
 
-    # If there is not one argument then display the usage.
+    # If there is not one argument then only display the usage.
     if (len(argv) != 2):
         usage()
     else:
@@ -124,16 +126,16 @@ if __name__ == '__main__':
         fshp = shapefile.Reader(fpath)
     except:
         print 'Error opening file '+fpath
-        exit
+        exit()
     
     # List of tuples, each tuple contains different possible forms of the same 
     # field.
     # Must separate, makes easier to remove tuple from super-tuple.
-    #fields = [['latitude','lat',],
-    #          ['longitude','lon',],
-     #         ['radius','rad','r',],
-      #        ['diameter','diam','d',], ]
-    fields = [['diameter','diam','d',], ]
+    fields = [['latitude','lat',],
+              ['longitude','lon',],
+              ['radius','rad','r',],
+              ['diameter','diam','d',],]
+    #fields = [['diameter','diam','d',], ]
  
     ## offset is used because DeletionFlag is listed at the start of the
     ## shapefile but isn't included in the table.
@@ -161,8 +163,8 @@ if __name__ == '__main__':
     # Write the output file
     if len(outcols) == 0:
         print 'No useful fields found. File not written.'
-        exit
+        exit()
     else:
         # Pass the reader object and outcols to printDiam
         printDiam(fshp,outcols,scale)
-        exit
+        exit()
