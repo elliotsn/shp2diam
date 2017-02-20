@@ -32,7 +32,6 @@ def usage():
 def getHeader():
     return """
 #  diam file written by shp2diam
-#  Elliot Sefton-Nash
 #
 # Area (km^2). Edit this value according to the area covered by this crater
 # distribution.
