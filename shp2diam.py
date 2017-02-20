@@ -13,12 +13,8 @@ def usage():
     USAGE:
         shp2diam [FILENAME]
 
-    Where FILENAME is the path to the shapefile. The output table will contain
-    the following fields if they are present in the shapefile
+    Where FILENAME is the path to the shapefile.
     
-    least one column in any combination of character case:
-        
-        
     If the following columns are present in any combination of character case 
     the program will include them in the output file:
 
