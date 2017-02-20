@@ -1,0 +1,16 @@
+Program to convert craters stored as polygons in a shapefile to a .diam file
+that is readable by the IDL program craterstats.
+
+USAGE:
+
+  shp2diam [FILENAME]
+
+Where FILENAME is the path to the shapefile.
+    
+If the following columns are present in any combination of character case 
+the program will include them in the output file:
+
+    diameter|diam|d
+    radius|rad|r
+    latitude|lat
+    longitude|lon 
